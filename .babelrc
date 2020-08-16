@@ -5,9 +5,9 @@
       {
         "preset-env": {
           "targets": "defaults"
-        },
+        }
       }
     ]
   ],
-  "plugins": []
+  "plugins": [["styled-components", { "ssr": true }]]
 }

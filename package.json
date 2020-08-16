@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "rimraf .next && next build && next export -o docs",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "touch docs/.nojekyll"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,12 @@
   "dependencies": {
     "next": "9.5.2",
     "react": "17.0.0-rc.0",
-    "react-dom": "17.0.0-rc.0"
+    "react-dom": "17.0.0-rc.0",
+    "styled-components": "5.1.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "1.11.1",
+    "css-loader": "4.2.1",
     "eslint": "7.7.0",
     "eslint-config-airbnb": "18.2.0",
     "eslint-config-prettier": "6.11.0",

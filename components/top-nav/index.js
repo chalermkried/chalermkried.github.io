@@ -1,11 +1,5 @@
-import { useState, useEffect } from "react"
-
 function TopNav() {
-  return (
-    <>
-      This is top nav!
-    </>
-  )
+  return <h1>In progress!</h1>
 }
 
 export default TopNav
