@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "rimraf .next && next build && next export -o docs",
-    "start": "next start",
-    "postbuild": "touch docs/.nojekyll"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
