@@ -28,7 +28,7 @@ const CARD_LIST = [
   {
     desc: 'Something',
     icon: ICON.terminal,
-    skills: ['skill1', 'skill1'],
+    skills: ['skill1', 'skill2'],
     subtitle: 'Pomelofashion',
     title: 'Senior Front End Engineer',
     titleCaption: '2020',
@@ -36,7 +36,7 @@ const CARD_LIST = [
   {
     desc: 'Something',
     icon: ICON.terminal,
-    skills: ['skill1', 'skill1'],
+    skills: ['skill1', 'skill2'],
     subtitle: 'Pomelofashion',
     title: 'Front End Engineer',
     titleCaption: '2018-2019',
@@ -44,7 +44,7 @@ const CARD_LIST = [
   {
     desc: 'Something',
     icon: ICON.terminal,
-    skills: ['skill1', 'skill1'],
+    skills: ['skill1', 'skill2'],
     subtitle: '7 Peaks Software',
     title: 'Junior Front End Developer',
     titleCaption: '2017-2018',
@@ -52,7 +52,7 @@ const CARD_LIST = [
   {
     desc: 'Something',
     icon: ICON.library,
-    skills: ['skill1', 'skill1'],
+    skills: ['skill1', 'skill2'],
     subtitle: 'Srinakharinwirot University',
     title: 'Student',
     titleCaption: '2014-2017',
@@ -65,6 +65,7 @@ function Exp() {
       CARD_LIST.map((card) => (
         <ExpCard
           desc={card.desc}
+          key={`${card.title}${card.titleCaption}`}
           iconJsx={<Icon src={card.icon} />}
           skills={card.skills}
           subtitle={card.subtitle}

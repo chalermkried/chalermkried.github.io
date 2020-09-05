@@ -20,7 +20,7 @@ function ExpCard({ desc, iconJsx, skills, subtitle, title, titleCaption }) {
         <span>{subtitle}</span>
         <p>{desc}</p>
         {skills.map((skill) => (
-          <div>{skill}</div>
+          <div key={skill}>{skill}</div>
         ))}
       </div>
     </Div>
