@@ -21,17 +21,6 @@ const MEDIA_QUERY = {
   [BREAKPOINT.tabletOnly]: '(min-width: 768px) and (max-width: 1024px)',
 }
 
-const TYPO = {
-  body1: 'b1',
-  body2: 'b2',
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  subtitle1: 's1',
-  subtitle2: 's2',
-}
-
 function cssQuery(key) {
   return (style) => `@media ${MEDIA_QUERY[key]} { ${style} }`
 }
@@ -39,10 +28,10 @@ function cssQuery(key) {
 const CONTAINER_STYLE = css`
   margin: auto;
   width: 70%;
-  max-width: 1000px;
+  max-width: 760px;
 
   ${cssQuery(BREAKPOINT.belowTablet)`
     width: 100%;
   `}
 `
-export { cssQuery, BREAKPOINT, CONTAINER_STYLE, COLOR, TYPO }
+export { cssQuery, BREAKPOINT, CONTAINER_STYLE, COLOR }

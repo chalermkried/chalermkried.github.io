@@ -39,6 +39,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="/script/svgxuse.min.js" defer />
         </body>
       </Html>
     )

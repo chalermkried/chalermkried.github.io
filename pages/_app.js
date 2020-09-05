@@ -1,14 +1,14 @@
 import App from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import SANITIZE_CSS from 'const/sanitize.css'
-import { COLOR, TYPO } from 'const/style'
+import { COLOR, TYPO } from 'const'
 
 const GlobalStyle = createGlobalStyle`
   ${SANITIZE_CSS.toString()}
 
   html {
     ${COLOR.primary}: #0d1321;
-    ${COLOR.neutral}: #ffeddf;
+    ${COLOR.neutral}: #fdfaec;
     ${COLOR.secondary}: #E57A44;
     ${COLOR.accent}: #5D43B1;
   }

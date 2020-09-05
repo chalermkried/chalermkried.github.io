@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TYPO, cssQuery, BREAKPOINT } from 'const/style'
+import { TYPO, cssQuery, BREAKPOINT } from 'const'
 
 const Section = styled.section`
   margin-top: 96px;
@@ -25,11 +25,11 @@ const Section = styled.section`
 `
 
 function About() {
-  const content = `Hi there!
+  const content = `Hi, I'm Gear!
 
-I like to create and style the websites, make them fast and easy to use as it can be. I care deeply about the UI and UX, how to gain organic traffics to the sites while also try to find the best Developer experience. I'm kind of addicted to problem-solving, or the feeling of solving it, they are always a good challenge to have.
+I like to create and style the websites, make them fast and easy to use as it can be. I care deeply about the UI and UX, how to gain organic traffics for the sites while also try to find the best Developer experience. I'm kind of addicted to problem-solving, or the feeling of solving it, they are always a good challenge to have.
 
-I appreciate and love music, good stories, football, and awesome people!`
+I appreciate and love music, stories, football, and awesome people!`
 
   return (
     <Section>
