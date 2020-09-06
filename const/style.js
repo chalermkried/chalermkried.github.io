@@ -5,7 +5,7 @@ const COLOR = {
   neutral: '--n',
   secondary: '--s',
   accent: '--a',
-  accentLight: '--al',
+  accentEmp: '--ae',
 }
 
 const MEDIA_QUERY = {

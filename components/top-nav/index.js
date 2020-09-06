@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { COLOR, CONTAINER_STYLE, TYPO, ICON, MEDIA_QUERY } from 'const'
 import Icon from 'components/shared/icon'
+import useStore from 'components/store'
+import { useCallback, useEffect, useState } from 'react'
 
 const Nav = styled.nav`
   ${CONTAINER_STYLE}
@@ -18,6 +20,7 @@ const Nav = styled.nav`
     position: absolute;
     z-index: 0;
     top: 0;
+    left: 0;
   }
 
   .wrapper {
@@ -64,6 +67,22 @@ const Nav = styled.nav`
     .icon {
       margin-right: 4px;
     }
+
+    .btn {
+      background-color: transparent;
+      border: 0;
+      display: flex;
+      align-items: center;
+      color: var(${COLOR.accent});
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(${COLOR.accentEmp});
+      }
+    }
   }
   
   @media ${MEDIA_QUERY.belowTablet} {
@@ -94,17 +113,32 @@ const Nav = styled.nav`
 `
 
 function TopNav() {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+  const storeDarkMode = useStore((state) => state.isDarkMode)
+  const toggleIsDarkMode = useStore(
+    useCallback((state) => state.toggleIsDarkMode, []),
+  )
+
+  // Note: To solve issue with SSR, so, hack for only development.
+  useEffect(() => {
+    setIsDarkMode(storeDarkMode)
+  }, [storeDarkMode])
+
   return (
     <Nav>
       <ul className="wrapper">
-        <li className={`${TYPO.subtitle1} logo`}>
+        <li className={`${TYPO.h3} logo`}>
           <Icon src={ICON.cog} />
           <span className="nav-label">Gear</span>
         </li>
-        <li className={`${TYPO.subtitle1} link`}>About / Experience</li>
-        <li className={`${TYPO.subtitle1} toggler`}>
-          <Icon src={ICON.light} />
-          <span className="nav-label">Light</span>
+        <li className={`${TYPO.subtitle2} link`}>ABOUT / EXPERIENCE</li>
+        <li className="toggler">
+          <button className="btn" onClick={toggleIsDarkMode} type="button">
+            <Icon src={isDarkMode ? ICON.moon : ICON.light} />
+            <span className={`${TYPO.subtitle2} nav-label`}>
+              {isDarkMode ? 'DARK' : 'LIGHT'}
+            </span>
+          </button>
         </li>
       </ul>
     </Nav>

@@ -1,17 +1,21 @@
-import App from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import SANITIZE_CSS from 'const/sanitize.css'
 import { COLOR, TYPO } from 'const'
+import useStore from 'components/store'
+
+const hexDark = '#131d31'
+const hexLight = '#fdfaec'
 
 const GlobalStyle = createGlobalStyle`
   ${SANITIZE_CSS.toString()}
 
   html {
-    ${COLOR.primary}: #0d1321;
-    ${COLOR.neutral}: #fdfaec;
+    ${COLOR.primary}: ${(props) => (props.isDarkMode ? hexLight : hexDark)};
+    ${COLOR.neutral}: ${(props) => (props.isDarkMode ? hexDark : hexLight)};
     ${COLOR.secondary}: #738290;
-    ${COLOR.accent}: #C94277;
-    ${COLOR.accentLight}: #E9AFC6;
+    ${COLOR.accent}: #CE5082;
+    ${COLOR.accentEmp}: ${(props) =>
+  props.isDarkMode ? '#B03063' : '#E08FAF'};
   }
 
   body {
@@ -24,6 +28,9 @@ const GlobalStyle = createGlobalStyle`
   }
   .${TYPO.body2} {
     font-size: 14px;
+  }
+  .${TYPO.body3} {
+    font-size: 12px;
   }
   .${TYPO.caption1} {
     font-size: 18px;
@@ -48,12 +55,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   .${TYPO.h3} {
-    display: inline-block;
     font-size: 20px;
     font-weight: 500;
     margin: 0;
   }
-  .${TYPO.h4} {}
   .${TYPO.subtitle1} {
     font-size: 18px;
     font-weight: 500;
@@ -64,16 +69,17 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
+// eslint-disable-next-line react/prop-types
+function MyApp({ Component, pageProps }) {
+  const isDarkMode = useStore((state) => state.isDarkMode)
 
-    return (
-      <>
-        <GlobalStyle />
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-        <Component {...pageProps} />
-      </>
-    )
-  }
+  return (
+    <>
+      <GlobalStyle isDarkMode={isDarkMode} />
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component {...pageProps} />
+    </>
+  )
 }
+
+export default MyApp

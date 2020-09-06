@@ -61,6 +61,10 @@ const TitleDiv = styled.div`
     height: ${iconSize}px;
   }
 
+  .title {
+    display: inline-block;
+  }
+
   .title-caption {
     color: var(${COLOR.secondary});
     margin-left: 8px;
@@ -86,7 +90,7 @@ const TitleDiv = styled.div`
 
 function ExpCard({ desc, icon, skills, subtitle, title, titleCaption }) {
   const skillsJsx = useMemo(
-    () => skills.map((skill, idx) => <Chip key={skill}>{skill}</Chip>),
+    () => skills.map((skill) => <Chip key={skill}>{skill}</Chip>),
     [skills],
   )
 
@@ -94,7 +98,7 @@ function ExpCard({ desc, icon, skills, subtitle, title, titleCaption }) {
     <WrapperDiv>
       <TitleDiv>
         <Icon src={icon} />
-        <h3 className={TYPO.h3}>{title}</h3>
+        <h3 className={`${TYPO.h3} title`}>{title}</h3>
         <span className={`${TYPO.caption1} title-caption`}>
           ({titleCaption})
         </span>

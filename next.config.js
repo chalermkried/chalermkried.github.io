@@ -1,4 +1,6 @@
-module.exports = {
+const withTM = require('next-transpile-modules')(['zustand'])
+
+module.exports = withTM({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.css$/,
@@ -7,4 +9,4 @@ module.exports = {
 
     return config
   },
-}
+})
