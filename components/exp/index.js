@@ -4,29 +4,9 @@ import Icon from 'components/shared/icon'
 import { useMemo } from 'react'
 import ExpCard from './card'
 
-const Section = styled.section`
-  margin-top: 72px;
-  height: 80vh;
-
-  .${TYPO.h1} {
-    ${cssQuery(BREAKPOINT.belowTablet)`
-      padding: 0 20px;
-      text-align: center;
-    `}
-  }
-
-  .${TYPO.body1} {
-    margin-top: 24px;
-
-    ${cssQuery(BREAKPOINT.belowTablet)`
-      padding: 0 20px;
-    `}
-  }
-`
-
 const CARD_LIST = [
   {
-    desc: 'Something',
+    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
     icon: ICON.terminal,
     skills: ['skill1', 'skill2'],
     subtitle: 'Pomelofashion',
@@ -34,30 +14,43 @@ const CARD_LIST = [
     titleCaption: '2020',
   },
   {
-    desc: 'Something',
+    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
     icon: ICON.terminal,
     skills: ['skill1', 'skill2'],
     subtitle: 'Pomelofashion',
     title: 'Front End Engineer',
-    titleCaption: '2018-2019',
+    titleCaption: '2018 - 2019',
   },
   {
-    desc: 'Something',
+    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
     icon: ICON.terminal,
     skills: ['skill1', 'skill2'],
     subtitle: '7 Peaks Software',
     title: 'Junior Front End Developer',
-    titleCaption: '2017-2018',
+    titleCaption: '2017 - 2018',
   },
   {
-    desc: 'Something',
+    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
     icon: ICON.library,
     skills: ['skill1', 'skill2'],
     subtitle: 'Srinakharinwirot University',
     title: 'Student',
-    titleCaption: '2014-2017',
+    titleCaption: '2014 - 2017',
   },
 ]
+
+const Section = styled.section`
+  margin-top: 72px;
+
+  > .title {
+    margin-bottom: 36px;
+
+    ${cssQuery(BREAKPOINT.belowTablet)`
+      padding: 0 20px;
+      text-align: center;
+    `}
+  }
+`
 
 function Exp() {
   const expCardsJsx = useMemo(
@@ -78,8 +71,7 @@ function Exp() {
 
   return (
     <Section>
-      <h1 className={TYPO.h1}>Experience</h1>
-      <p className={TYPO.body1}>This will be my experience!</p>
+      <span className={`${TYPO.h2} title`}>Experience</span>
       {expCardsJsx}
     </Section>
   )

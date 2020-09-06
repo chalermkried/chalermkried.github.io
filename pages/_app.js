@@ -9,8 +9,8 @@ const GlobalStyle = createGlobalStyle`
   html {
     ${COLOR.primary}: #0d1321;
     ${COLOR.neutral}: #fdfaec;
-    ${COLOR.secondary}: #E57A44;
-    ${COLOR.accent}: #5D43B1;
+    ${COLOR.secondary}: #e57a44;
+    ${COLOR.accent}: #3454D1;
   }
 
   body {
@@ -18,25 +18,48 @@ const GlobalStyle = createGlobalStyle`
     color: var(${COLOR.primary});
   }
 
-  .${TYPO.body1} {}
-  .${TYPO.body2} {}
+  .${TYPO.body1} {
+    font-size: 16px;
+  }
+  .${TYPO.body2} {
+    font-size: 14px;
+  }
+  .${TYPO.caption1} {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .${TYPO.caption2} {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+  }
   .${TYPO.h1} {
+    display: block;
     font-size: 32px;
+    font-weight: 700;
     margin: 0;
   }
   .${TYPO.h2} {
+    display: block;
     font-size: 24px;
+    font-weight: 700;
     margin: 0;
   }
-  .${TYPO.h3} {}
+  .${TYPO.h3} {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
   .${TYPO.h4} {}
   .${TYPO.subtitle1} {
+    font-size: 18px;
     font-weight: 500;
-    font-size: 20px;
   }
   .${TYPO.subtitle2} {
+    font-size: 14px;
     font-weight: 500;
-    font-size: 16px;
   }
 `
 

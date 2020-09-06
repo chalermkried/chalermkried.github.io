@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import About from 'components/about'
 import { CONTAINER_STYLE } from 'const'
 import Exp from 'components/exp'
+import Footer from 'components/footer'
 
 const Main = styled.main`
   ${CONTAINER_STYLE}
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <Exp />
       </Main>
+      <Footer />
     </>
   )
 }

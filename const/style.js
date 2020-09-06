@@ -28,7 +28,7 @@ function cssQuery(key) {
 const CONTAINER_STYLE = css`
   margin: auto;
   width: 70%;
-  max-width: 760px;
+  max-width: 720px;
 
   ${cssQuery(BREAKPOINT.belowTablet)`
     width: 100%;

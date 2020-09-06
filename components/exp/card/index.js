@@ -1,24 +1,41 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { TYPO } from 'const'
 
 const Div = styled.div`
-  margin: 8px 0 16px;
   display: flex;
+  margin: 12px 0 24px;
+
+  .icon-wrapper {
+    flex-shrink: 0;
+  }
 
   .content-wrapper {
+    margin-left: 16px;
+    padding-right: 48px;
+  }
+
+  .title-caption {
+    margin-left: 8px;
+  }
+
+  .desc {
+    margin: 12px 0;
   }
 `
 
 function ExpCard({ desc, iconJsx, skills, subtitle, title, titleCaption }) {
   return (
     <Div>
-      {iconJsx}
+      <div className="icon-wrapper">{iconJsx}</div>
       <div className="content-wrapper">
-        <span>{title}</span>
-        <span>({titleCaption})</span>
+        <h3 className={TYPO.h3}>{title}</h3>
+        <span className={`${TYPO.caption1} title-caption`}>
+          ({titleCaption})
+        </span>
         <br />
-        <span>{subtitle}</span>
-        <p>{desc}</p>
+        <span className={TYPO.subtitle1}>{subtitle}</span>
+        <p className={`${TYPO.body2} desc`}>{desc}</p>
         {skills.map((skill) => (
           <div key={skill}>{skill}</div>
         ))}
