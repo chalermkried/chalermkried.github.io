@@ -1,26 +1,29 @@
 import styled from 'styled-components'
-import { TYPO, cssQuery, BREAKPOINT } from 'const'
+import { TYPO, MEDIA_QUERY, COLOR } from 'const'
 
 const Section = styled.section`
-  margin-top: 96px;
+  margin-top: 60px;
 
-  ${cssQuery(BREAKPOINT.belowTablet)`margin-top: 24px;`}
-
-  .${TYPO.h1},
   .${TYPO.h2} {
-    ${cssQuery(BREAKPOINT.belowTablet)`
-      padding: 0 20px;
-      text-align: center;
-    `}
+    color: var(${COLOR.accent});
   }
 
   .${TYPO.body1} {
     margin-top: 48px;
     white-space: pre-line;
+  }
 
-    ${cssQuery(BREAKPOINT.belowTablet)`
+  @media ${MEDIA_QUERY.belowTablet} {
+    margin-top: 24px;
+
+    .${TYPO.h1}, .${TYPO.h2} {
       padding: 0 20px;
-    `}
+      text-align: center;
+    }
+
+    .${TYPO.body1} {
+      padding: 0 20px;
+    }
   }
 `
 

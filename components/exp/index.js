@@ -1,6 +1,5 @@
-import { TYPO, cssQuery, BREAKPOINT, ICON } from 'const'
+import { TYPO, ICON, MEDIA_QUERY } from 'const'
 import styled from 'styled-components'
-import Icon from 'components/shared/icon'
 import { useMemo } from 'react'
 import ExpCard from './card'
 
@@ -44,11 +43,15 @@ const Section = styled.section`
 
   > .title {
     margin-bottom: 36px;
+  }
 
-    ${cssQuery(BREAKPOINT.belowTablet)`
-      padding: 0 20px;
+  @media ${MEDIA_QUERY.belowTablet} {
+    margin-top: 48px;
+    padding: 0 16px;
+
+    > .title {
       text-align: center;
-    `}
+    }
   }
 `
 
@@ -59,7 +62,7 @@ function Exp() {
         <ExpCard
           desc={card.desc}
           key={`${card.title}${card.titleCaption}`}
-          iconJsx={<Icon src={card.icon} />}
+          icon={card.icon}
           skills={card.skills}
           subtitle={card.subtitle}
           title={card.title}

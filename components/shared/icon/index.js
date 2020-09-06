@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { useState, useEffect } from 'react'
 
 const Svg = styled.svg`
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   opacity: 0;
   transition: opacity 0.2s linear;
 
@@ -21,7 +21,11 @@ function Icon({ className, src }) {
   }, [])
 
   return (
-    <Svg className={`icon${isLoaded ? ' loaded' : ''}${className}`}>
+    <Svg
+      className={`icon${isLoaded ? ' loaded' : ''}${
+        className ? ` ${className}` : ''
+      }`}
+    >
       <use href={src} />
     </Svg>
   )

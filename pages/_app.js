@@ -9,8 +9,9 @@ const GlobalStyle = createGlobalStyle`
   html {
     ${COLOR.primary}: #0d1321;
     ${COLOR.neutral}: #fdfaec;
-    ${COLOR.secondary}: #e57a44;
-    ${COLOR.accent}: #3454D1;
+    ${COLOR.secondary}: #738290;
+    ${COLOR.accent}: #C94277;
+    ${COLOR.accentLight}: #E9AFC6;
   }
 
   body {
@@ -25,12 +26,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 14px;
   }
   .${TYPO.caption1} {
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 500;
   }
   .${TYPO.caption2} {
-    font-size: 12px;
+    font-size: 16px;
     font-style: italic;
     font-weight: 500;
   }

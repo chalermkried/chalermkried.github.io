@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLOR, CONTAINER_STYLE, TYPO, cssQuery, BREAKPOINT, ICON } from 'const'
+import { COLOR, CONTAINER_STYLE, TYPO, ICON, MEDIA_QUERY } from 'const'
 import Icon from 'components/shared/icon'
 
 const Nav = styled.nav`
@@ -14,9 +14,7 @@ const Nav = styled.nav`
     content: '';
     width: 100%;
     height: 175%;
-    background: linear-gradient(180deg, var(${
-      COLOR.neutral
-    }) 50%, hsla(0, 0%, 100%, 0));
+    background: linear-gradient(180deg, var(${COLOR.neutral}) 50%, hsla(0, 0%, 100%, 0));
     position: absolute;
     z-index: 0;
     top: 0;
@@ -36,8 +34,6 @@ const Nav = styled.nav`
     flex-grow: 1;
 
     .icon {
-      width: 24px;
-      height: 24px;
       margin-right: 4px;
       animation-name: spin;
       animation-duration: 3s;
@@ -66,29 +62,35 @@ const Nav = styled.nav`
     text-align: right;
 
     .icon {
-      width: 24px;
-      height: 24px;
       margin-right: 4px;
     }
   }
   
-  ${cssQuery(BREAKPOINT.belowTablet)`
+  @media ${MEDIA_QUERY.belowTablet} {
     margin-top: 0;
 
     .wrapper {
-      padding: 0 20px;
+      padding: 0 16px;
     }
 
-    .logo .span {
-      display: none;
+    .link {
+      margin-right: 0;
     }
 
     .toggler {
       margin-left: 0;
       flex-grow: 1;
       justify-content: flex-end;
+
+      .icon {
+        margin-right: 0;
+      }
     }
-  `}
+    
+    .nav-label {
+      display: none;
+    }
+  }
 `
 
 function TopNav() {
@@ -97,12 +99,12 @@ function TopNav() {
       <ul className="wrapper">
         <li className={`${TYPO.subtitle1} logo`}>
           <Icon src={ICON.cog} />
-          <span className="span">Gear</span>
+          <span className="nav-label">Gear</span>
         </li>
-        <li className={`${TYPO.subtitle2} link`}>About / Experience</li>
-        <li className={`${TYPO.subtitle2} toggler`}>
+        <li className={`${TYPO.subtitle1} link`}>About / Experience</li>
+        <li className={`${TYPO.subtitle1} toggler`}>
           <Icon src={ICON.light} />
-          Light
+          <span className="nav-label">Light</span>
         </li>
       </ul>
     </Nav>

@@ -5,24 +5,14 @@ const COLOR = {
   neutral: '--n',
   secondary: '--s',
   accent: '--a',
-}
-
-const BREAKPOINT = {
-  belowTablet: 'bt',
-  smallPhone: 'sp',
-  highDesktop: 'hd',
-  tabletOnly: 'to',
+  accentLight: '--al',
 }
 
 const MEDIA_QUERY = {
-  [BREAKPOINT.belowTablet]: '(max-width: 767px)',
-  [BREAKPOINT.smallPhone]: '(max-width: 480px)',
-  [BREAKPOINT.highDesktop]: '(min-width: 1281px)',
-  [BREAKPOINT.tabletOnly]: '(min-width: 768px) and (max-width: 1024px)',
-}
-
-function cssQuery(key) {
-  return (style) => `@media ${MEDIA_QUERY[key]} { ${style} }`
+  belowTablet: '(max-width: 767px)',
+  smallPhone: '(max-width: 480px)',
+  highDesktop: '(min-width: 1281px)',
+  tabletOnly: '(min-width: 768px) and (max-width: 1024px)',
 }
 
 const CONTAINER_STYLE = css`
@@ -30,8 +20,8 @@ const CONTAINER_STYLE = css`
   width: 70%;
   max-width: 720px;
 
-  ${cssQuery(BREAKPOINT.belowTablet)`
+  @media ${MEDIA_QUERY.belowTablet} {
     width: 100%;
-  `}
+  }
 `
-export { cssQuery, BREAKPOINT, CONTAINER_STYLE, COLOR }
+export { CONTAINER_STYLE, COLOR, MEDIA_QUERY }
