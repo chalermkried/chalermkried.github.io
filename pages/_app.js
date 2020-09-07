@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import SANITIZE_CSS from 'const/sanitize.css'
 import { COLOR, TYPO } from 'const'
 import useStore from 'components/store'
+import { useEffect } from 'react'
 
 const hexDark = '#131d31'
 const hexLight = '#fdfaec'
@@ -56,14 +57,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: 12px;
   }
   .${TYPO.caption1} {
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 500;
-  }
-  .${TYPO.caption2} {
     font-size: 16px;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
+  }
+  .${TYPO.caption2} {
+    font-family: 'Fira Code', var(--ff);
+    font-size: 12px;
+    font-weight: 700;
   }
   .${TYPO.h1} {
     display: block;

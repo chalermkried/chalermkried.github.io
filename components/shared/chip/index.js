@@ -11,7 +11,7 @@ const Div = styled.div`
 
 function Chip({ children, className }) {
   return (
-    <Div className={`${TYPO.subtitle2}${className ? ` ${className}` : ''}`}>
+    <Div className={`${TYPO.caption2}${className ? ` ${className}` : ''}`}>
       {children}
     </Div>
   )
