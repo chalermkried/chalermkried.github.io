@@ -20,6 +20,7 @@ const WrapperDiv = styled.div`
 
   .desc {
     margin: 12px 0;
+    text-align: justify;
   }
 
   .skill-wrapper {

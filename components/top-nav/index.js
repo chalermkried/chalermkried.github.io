@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { COLOR, CONTAINER_STYLE, TYPO, ICON, MEDIA_QUERY } from 'const'
 import Icon from 'components/shared/icon'
 import useStore from 'components/store'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { EL_ABOUT, EL_EXP } from 'const/element'
 
 const Nav = styled.nav`
@@ -15,7 +15,7 @@ const Nav = styled.nav`
   &::after {
     content: '';
     width: 100%;
-    height: 175%;
+    height: 130px;
     background: linear-gradient(
       180deg,
       var(${COLOR.neutral}) 50%,

@@ -12,9 +12,10 @@ const Section = styled.section`
     color: var(${COLOR.secondary});
   }
 
-  .${TYPO.body1} {
+  .desc {
     margin-top: 48px;
     white-space: pre-line;
+    text-align: justify;
   }
 
   .desc {
@@ -57,6 +58,10 @@ const Section = styled.section`
     margin-top: 24px;
     padding: 0 20px;
     text-align: center;
+
+    .desc {
+      text-align: center;
+    }
   }
 `
 

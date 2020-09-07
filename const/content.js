@@ -1,5 +1,9 @@
 import { ICON } from './icon'
 
+export const META = {
+  title: 'Chalermkried Sudjanakobkul',
+}
+
 export const CONTENT_ABOUT = {
   title: 'Chalermkried Sudjanakobkul',
   subtitle: 'Front End Engineer',
