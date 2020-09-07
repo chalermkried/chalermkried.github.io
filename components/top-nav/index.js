@@ -133,11 +133,9 @@ function toggleIsDarkMode(e) {
   useStore.getState().toggleIsDarkMode()
 
   if (e?.target) {
-    Promise.resolve().then(() => {
-      e.target.blur()
-      e.target.parentElement?.blur()
-      e.target.parentElement.parentElement?.blur()
-    })
+    e.target.blur()
+    e.target.parentElement?.blur()
+    e.target.parentElement.parentElement?.blur()
   }
 }
 

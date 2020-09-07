@@ -1,7 +1,11 @@
 import { ICON } from './icon'
 
 export const META = {
-  title: 'Chalermkried Sudjanakobkul',
+  title: 'Gear - Chalermkried Sudjanakobkul',
+  desc:
+    'A Front End Engineer who likes, create, and optimize websites, problem solving, helping people, and appreciate arts.',
+  image: 'https://chalermkried.github.io/assets/cover.jpg',
+  url: 'https://chalermkried.github.io',
 }
 
 export const CONTENT_ABOUT = {
@@ -9,9 +13,11 @@ export const CONTENT_ABOUT = {
   subtitle: 'Front End Engineer',
   desc: `Hi, I'm Gear!
 
-  I like to create and style the websites, make them fast and easy to use as it can be. I care deeply about the UI and UX, how to gain organic traffics for the sites while also try to find the best Developer experience. I'm kind of addicted to problem-solving, or the feeling of solving it, they are always a good challenge to have.
+I like to create and optimize websites, make them fast, easy to use, minimal efforts needed, an enjoyable experience for the users. I care deeply aboutthe UI and UX, make use of organic traffics with SEO, and last but not least, accessibility. With all those preferred results, I alwayslook for the best tools to help in the development, new tech stacks, and alternatives.
   
-  I appreciate and love music, stories, football, and awesome people!`,
+I also like to help people and solve problems, those challenges are sometimes enjoyable!
+  
+Interests: music, stories, football, philosophy, and awesome people!`,
   github: 'https://github.com/chalermkried/',
   linkedin: 'https://www.linkedin.com/in/gear-chalermkried/',
 }
