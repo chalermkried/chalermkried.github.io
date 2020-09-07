@@ -18,7 +18,7 @@ const MEDIA_QUERY = {
 
 const CONTAINER_STYLE = css`
   margin: auto;
-  width: 70%;
+  width: 80%;
   max-width: 720px;
 
   @media ${MEDIA_QUERY.belowTablet} {

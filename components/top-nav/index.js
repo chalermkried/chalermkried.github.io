@@ -90,6 +90,16 @@ const Nav = styled.nav`
     &:hover {
       color: var(${COLOR.accentEmp});
     }
+
+    @media ${MEDIA_QUERY.belowTablet} {
+      &:hover {
+        color: inherit;
+      }
+
+      &:active {
+        color: var(${COLOR.accentEmp});
+      }
+    }
   }
 
   @media ${MEDIA_QUERY.belowTablet} {
@@ -123,9 +133,11 @@ function toggleIsDarkMode(e) {
   useStore.getState().toggleIsDarkMode()
 
   if (e?.target) {
-    e.target.blur()
-    e.target.parentElement?.blur()
-    e.target.parentElement.parentElement?.blur()
+    Promise.resolve().then(() => {
+      e.target.blur()
+      e.target.parentElement?.blur()
+      e.target.parentElement.parentElement?.blur()
+    })
   }
 }
 

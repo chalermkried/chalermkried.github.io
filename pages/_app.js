@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     ${COLOR.primary}: ${(props) => (props.isDarkMode ? hexLight : hexDark)};
     ${COLOR.neutral}: ${(props) => (props.isDarkMode ? hexDark : hexLight)};
     ${COLOR.secondary}: ${(props) =>
-  props.isDarkMode ? '#759EB8' : '#B68F40'};
+  props.isDarkMode ? '#759EB8' : '#628BA7'};
     ${COLOR.lighten}: #738290;
     ${COLOR.accent}: #CE5082;
     ${COLOR.accentEmp}: ${(props) =>
