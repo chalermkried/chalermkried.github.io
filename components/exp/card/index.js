@@ -10,11 +10,11 @@ const iconMargin = 20
 
 const WrapperDiv = styled.div`
   margin: 16px 0 32px;
-  padding-right: 48px;
+  padding-right: 64px;
 
   .subtitle {
     display: block;
-    color: var(${COLOR.accent});
+    color: var(${COLOR.secondary});
     margin-top: 4px;
   }
 
@@ -66,7 +66,7 @@ const TitleDiv = styled.div`
   }
 
   .title-caption {
-    color: var(${COLOR.secondary});
+    color: var(${COLOR.lighten});
     margin-left: 8px;
   }
 

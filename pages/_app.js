@@ -10,9 +10,17 @@ const GlobalStyle = createGlobalStyle`
   ${SANITIZE_CSS.toString()}
 
   html {
+    scroll-behavior: smooth;
+    
+    @media screen and (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
+
     ${COLOR.primary}: ${(props) => (props.isDarkMode ? hexLight : hexDark)};
     ${COLOR.neutral}: ${(props) => (props.isDarkMode ? hexDark : hexLight)};
-    ${COLOR.secondary}: #738290;
+    ${COLOR.secondary}: ${(props) =>
+  props.isDarkMode ? '#759EB8' : '#B68F40'};
+    ${COLOR.lighten}: #738290;
     ${COLOR.accent}: #CE5082;
     ${COLOR.accentEmp}: ${(props) =>
   props.isDarkMode ? '#B03063' : '#E08FAF'};

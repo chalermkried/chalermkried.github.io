@@ -1,44 +1,12 @@
-import { TYPO, ICON, MEDIA_QUERY } from 'const'
+import { TYPO, MEDIA_QUERY } from 'const'
 import styled from 'styled-components'
 import { useMemo } from 'react'
+import { EL_EXP } from 'const/element'
+import { CONTENT_EXP } from 'const/content'
 import ExpCard from './card'
 
-const CARD_LIST = [
-  {
-    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
-    icon: ICON.terminal,
-    skills: ['skill1', 'skill2'],
-    subtitle: 'Pomelofashion',
-    title: 'Senior Front End Engineer',
-    titleCaption: '2020',
-  },
-  {
-    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
-    icon: ICON.terminal,
-    skills: ['skill1', 'skill2'],
-    subtitle: 'Pomelofashion',
-    title: 'Front End Engineer',
-    titleCaption: '2018 - 2019',
-  },
-  {
-    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
-    icon: ICON.terminal,
-    skills: ['skill1', 'skill2'],
-    subtitle: '7 Peaks Software',
-    title: 'Junior Front End Developer',
-    titleCaption: '2017 - 2018',
-  },
-  {
-    desc: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`,
-    icon: ICON.library,
-    skills: ['skill1', 'skill2'],
-    subtitle: 'Srinakharinwirot University',
-    title: 'Student',
-    titleCaption: '2014 - 2017',
-  },
-]
-
 const Section = styled.section`
+  scroll-margin-top: 96px;
   margin-top: 72px;
 
   > .title {
@@ -58,7 +26,7 @@ const Section = styled.section`
 function Exp() {
   const expCardsJsx = useMemo(
     () =>
-      CARD_LIST.map((card) => (
+      CONTENT_EXP.data.map((card) => (
         <ExpCard
           desc={card.desc}
           key={`${card.title}${card.titleCaption}`}
@@ -73,8 +41,8 @@ function Exp() {
   )
 
   return (
-    <Section>
-      <span className={`${TYPO.h2} title`}>Experience</span>
+    <Section id={EL_EXP}>
+      <span className={`${TYPO.h2} title`}>{CONTENT_EXP.title}</span>
       {expCardsJsx}
     </Section>
   )

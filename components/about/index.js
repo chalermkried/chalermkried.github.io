@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import { TYPO, MEDIA_QUERY, COLOR } from 'const'
+import { EL_ABOUT } from 'const/element'
+import { CONTENT_ABOUT } from 'const/content'
 
 const Section = styled.section`
+  scroll-margin-top: 80px;
   margin-top: 60px;
 
   .${TYPO.h2} {
-    color: var(${COLOR.accent});
+    color: var(${COLOR.secondary});
   }
 
   .${TYPO.body1} {
@@ -28,17 +31,11 @@ const Section = styled.section`
 `
 
 function About() {
-  const content = `Hi, I'm Gear!
-
-I like to create and style the websites, make them fast and easy to use as it can be. I care deeply about the UI and UX, how to gain organic traffics for the sites while also try to find the best Developer experience. I'm kind of addicted to problem-solving, or the feeling of solving it, they are always a good challenge to have.
-
-I appreciate and love music, stories, football, and awesome people!`
-
   return (
-    <Section>
-      <h1 className={TYPO.h1}>Chalermkried Sudjanakobkul</h1>
-      <h2 className={TYPO.h2}>Front End Engineer</h2>
-      <p className={TYPO.body1}>{content}</p>
+    <Section id={EL_ABOUT}>
+      <h1 className={TYPO.h1}>{CONTENT_ABOUT.title}</h1>
+      <h2 className={TYPO.h2}>{CONTENT_ABOUT.subtitle}</h2>
+      <p className={TYPO.body1}>{CONTENT_ABOUT.desc}</p>
     </Section>
   )
 }

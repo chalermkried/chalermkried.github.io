@@ -4,6 +4,7 @@ const COLOR = {
   primary: '--p',
   neutral: '--n',
   secondary: '--s',
+  lighten: '--l',
   accent: '--a',
   accentEmp: '--ae',
 }

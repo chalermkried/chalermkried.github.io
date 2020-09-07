@@ -3,20 +3,24 @@ import { COLOR, CONTAINER_STYLE, TYPO, ICON, MEDIA_QUERY } from 'const'
 import Icon from 'components/shared/icon'
 import useStore from 'components/store'
 import { useCallback, useEffect, useState } from 'react'
+import { EL_ABOUT, EL_EXP } from 'const/element'
 
 const Nav = styled.nav`
   ${CONTAINER_STYLE}
-  color: var(${COLOR.accent});
   position: sticky;
   top: 0;
   margin: 32px auto 0;
   padding: 12px 0;
-  
+
   &::after {
     content: '';
     width: 100%;
     height: 175%;
-    background: linear-gradient(180deg, var(${COLOR.neutral}) 50%, hsla(0, 0%, 100%, 0));
+    background: linear-gradient(
+      180deg,
+      var(${COLOR.neutral}) 50%,
+      hsla(0, 0%, 100%, 0)
+    );
     position: absolute;
     z-index: 0;
     top: 0;
@@ -35,11 +39,12 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
     flex-grow: 1;
+    color: var(${COLOR.secondary});
 
     .icon {
       margin-right: 4px;
       animation-name: spin;
-      animation-duration: 3s;
+      animation-duration: 2.5s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
 
@@ -53,9 +58,10 @@ const Nav = styled.nav`
       }
     }
   }
-  
-  .link {
-    margin-right: 40px;
+
+  .links,
+  .toggler {
+    color: var(${COLOR.accent});
   }
 
   .toggler {
@@ -67,24 +73,25 @@ const Nav = styled.nav`
     .icon {
       margin-right: 4px;
     }
+  }
 
-    .btn {
-      background-color: transparent;
-      border: 0;
-      display: flex;
-      align-items: center;
-      color: var(${COLOR.accent});
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 8px;
-      transition: color 0.2s ease-in-out;
+  .btn {
+    background-color: transparent;
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    color: var(${COLOR.accent});
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
 
-      &:hover {
-        color: var(${COLOR.accentEmp});
-      }
+    &:hover {
+      color: var(${COLOR.accentEmp});
     }
   }
-  
+
   @media ${MEDIA_QUERY.belowTablet} {
     margin-top: 0;
 
@@ -92,7 +99,7 @@ const Nav = styled.nav`
       padding: 0 16px;
     }
 
-    .link {
+    .links {
       margin-right: 0;
     }
 
@@ -105,19 +112,26 @@ const Nav = styled.nav`
         margin-right: 0;
       }
     }
-    
+
     .nav-label {
       display: none;
     }
   }
 `
 
+function toggleIsDarkMode(e) {
+  useStore.getState().toggleIsDarkMode()
+
+  if (e?.target) {
+    e.target.blur()
+    e.target.parentElement?.blur()
+    e.target.parentElement.parentElement?.blur()
+  }
+}
+
 function TopNav() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const storeDarkMode = useStore((state) => state.isDarkMode)
-  const toggleIsDarkMode = useStore(
-    useCallback((state) => state.toggleIsDarkMode, []),
-  )
 
   // Note: To solve issue with SSR, so, hack for only development.
   useEffect(() => {
@@ -131,7 +145,15 @@ function TopNav() {
           <Icon src={ICON.cog} />
           <span className="nav-label">Gear</span>
         </li>
-        <li className={`${TYPO.subtitle2} link`}>ABOUT / EXPERIENCE</li>
+        <li className={`${TYPO.subtitle2} links`}>
+          <a className="btn" href={`#${EL_ABOUT}`}>
+            ABOUT
+          </a>
+          &nbsp;/&nbsp;
+          <a className="btn" href={`#${EL_EXP}`}>
+            EXPERIENCE
+          </a>
+        </li>
         <li className="toggler">
           <button className="btn" onClick={toggleIsDarkMode} type="button">
             <Icon src={isDarkMode ? ICON.moon : ICON.light} />

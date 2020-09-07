@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { COLOR, TYPO } from 'const'
 
 const Div = styled.div`
-  background-color: var(${COLOR.accent});
+  background-color: var(${COLOR.secondary});
   color: var(${COLOR.neutral});
   border-radius: 48px;
   padding: 4px 8px;
