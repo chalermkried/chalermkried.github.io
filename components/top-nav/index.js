@@ -15,7 +15,7 @@ const Nav = styled.nav`
   &::after {
     content: '';
     width: 100%;
-    height: 130px;
+    height: 110px;
     background: linear-gradient(
       180deg,
       var(${COLOR.neutral}) 50%,

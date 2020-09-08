@@ -62,7 +62,7 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131d31" />
           <meta name="msapplication-TileColor" content="#fdfaec" />
           <meta name="theme-color" content="#fdfaec" />
-          {process.env.NODE_ENV === 'production' && (
+          {(process.env.NODE_ENV === 'production' || true) && (
             <>
               <script
                 async
@@ -70,11 +70,7 @@ export default class MyDocument extends Document {
               />
               <script
                 dangerouslySetInnerHTML={{
-                  __html: `
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_TRACKING_ID}');`,
+                  __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_TRACKING_ID}');`,
                 }}
               />
             </>

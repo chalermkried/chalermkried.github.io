@@ -45,7 +45,7 @@ After a few months, due to the circumstances, I got to become the web team lead,
       ],
       subtitle: 'Pomelofashion',
       title: 'Senior Front End Engineer',
-      titleCaption: '2020',
+      titleCaption: 'Feb 2020 - Present',
     },
     {
       desc: `Working as part of the Front End web team, to maintain, implement new features, and support campaigns with the newly released Pomelo web (at that time).
@@ -60,7 +60,6 @@ During this time, I also had the chance to work in the LEAD program, an internal
         'JavaScript',
         'Git',
         'Bitbucket',
-        'Bitbucket Pipeline',
         'JIRA',
         'Scrum',
         'Agile',
@@ -72,7 +71,7 @@ During this time, I also had the chance to work in the LEAD program, an internal
       ],
       subtitle: 'Pomelofashion',
       title: 'Front End Engineer',
-      titleCaption: '2018 - 2019',
+      titleCaption: 'Aug 2018 - Jan 2020',
     },
     {
       desc: `Worked as a member of the Front End web development team, in a multicultural software house company with a full team of product/software development consists of Designers (UI/UX), Products (PM/PO), Testers (QA), and Backend.
@@ -95,7 +94,7 @@ Had the chance to work in many projects, the first project was the project that 
       ],
       subtitle: '7 Peaks Software',
       title: 'Junior Front End Developer',
-      titleCaption: '2017 - 2018',
+      titleCaption: 'Jun 2017 -  Aug 2018',
     },
     {
       desc: `Studied in Computer Science, learned about Data Structure, Algorithm, Mathematics, Statistics, and various topics related to the fundamentals of programming and problem-solving.
@@ -106,9 +105,11 @@ Yielded many full-stack web projects, and experienced in other programming langu
         'HTML',
         'CSS',
         'JavaScript',
+        'jQuery',
         'PHP',
         'MySQL',
         'Oracle',
+        'Apache',
         'Full Stack',
       ],
       subtitle: 'Srinakharinwirot University',
