@@ -26,9 +26,9 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
-      desc: `Working in a financial related firm for the first time, here I'll have to chance to work on many products, both on Front-end and Back-end side. more than I had on the previous roles.
+      desc: `Working in a financial related firm for the first time, here I'll have to chance to work on many products, both on Front-end and Back-end side. more than I had in the previous roles.
       
-      Under the technology team, there are a lot of new tools and different service providers to try and learn to use. A more hand-on experience in product and application building from bottom to the top.`,
+      Under the technology team, there are a lot of new tools and different service providers to try and learn to use. A more hands-on experience in product and application building from bottom to the top.`,
       icon: ICON.terminal,
       skills: ['Backends for Frontends', 'Docker', 'Azure', 'Groovy'],
       subtitle: 'Prudential Life Assurance (Thailand) PCL',
