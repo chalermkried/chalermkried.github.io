@@ -26,6 +26,16 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
+      desc: `Working in a financial related firm for the first time, here I'll have to chance to work on many products, both on Front-end and Back-end side. more than I had on the previous roles.
+      
+      Under the technology team, there are a lot of new tools and different service providers to try and learn to use. A more hand-on experience in product and application building from bottom to the top.`,
+      icon: ICON.terminal,
+      skills: ['Backends for Frontends', 'Docker', 'Azure', 'Groovy'],
+      subtitle: 'Prudential Life Assurance (Thailand) PCL',
+      title: 'Full-Stack Developer',
+      titleCaption: 'Nov 2020 - Present',
+    },
+    {
       desc: `With the new role, I carry over most of the tasks from the previous role. But now as a Senior, I have the chance to help and teach other members of the team more. Also more responsibility to make decisions in the meetings with other teams.
 
 After a few months, due to the circumstances, I got to become the web team lead, internally. With this, it also meant my responsibility now covers more on the higher levels tasks such as team management, web monitoring, infrastructure monitoring, release management, documentation, and managing the team of outsource-developers.`,
@@ -45,10 +55,10 @@ After a few months, due to the circumstances, I got to become the web team lead,
       ],
       subtitle: 'Pomelofashion',
       title: 'Senior Front-End Engineer',
-      titleCaption: 'Feb 2020 - Present',
+      titleCaption: 'Feb 2020 - Nov 2020',
     },
     {
-      desc: `Working as part of the Front-End web team, to maintain, implement new features, and support campaigns with the newly released Pomelo web (at that time).
+      desc: `Worked as part of the Front-End web team, to maintain, implement new features, and support campaigns with the newly released Pomelo web (at that time).
 
 The Pomelo web is the main product to focus on, I closely worked with the UI/UX team to implement and improve the website following the mockups with prioritization from the Product team. Also correlated with the QA team to resolve issues and bugs. There are also other web projects such as Pomelo Screens and Internal Dashboards that I became the lead developer at the latter part of this time.
       
@@ -66,6 +76,7 @@ During this time, I also had the chance to work in the LEAD program, an internal
         'REST',
         'React',
         'Next.js',
+        'Jenkins',
         'Redux',
         'Product Management',
       ],
