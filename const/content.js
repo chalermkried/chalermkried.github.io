@@ -26,11 +26,32 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
-      desc: `Working in a financial-related, corporate firm, for the first time, here I have the chance to work on many projects, both customer-facing and internal products. By working on stacks such as Front-end, BFF, Gateway, APIs, and Back-end.
+      desc: `Back to a leaner working environment and resuming a more-frontend focused role. With my position as a senior member of the team, my work scope expands to more than just coding and delivering features.
+      
+      The applications that I'm working on this time are more logic-heavy and involve many connected parts, state management, and data manipulation is crucial. Our team's works also involve the process of migrating older codebase to a newer stack which requires regular collaboration and communication between engineers.
+      
+      Software paradigms, concepts, and architecture design play a vital role to help the company, team, and application scaling.`,
+      icon: ICON.terminal,
+      skills: [
+        'CircleCI',
+        'Semantic Release',
+        'React Query',
+        'Clean Architecture',
+        'Python',
+        'Django',
+      ],
+      subtitle: 'CREA',
+      title: 'Senior Frontend Engineer',
+      titleCaption: 'Dec 2021 - Present',
+    },
+    {
+      desc: `Worked in a financial-related, corporate firm, for the first time, here I have the chance to work on many projects, both customer-facing and internal products. By working on stacks such as Front-end, BFF, Gateway, APIs, and Back-end.
       
       Under the technology team, there are many new tools and different service providers that I have learned to use. Also more hands-on experience in product and application building from the bottom to the top.
             
-      The works here are pretty broads. I have a lot more opportunities to work in the DevOps part of the product cycle than I had before. My daily tasks as a developer here are less on the Front-end parts. But spread out into many stacks with more focus on the overview of the applications.`,
+      The works here are pretty broads. I have a lot more opportunities to work in the DevOps part of the product cycle than I had before. My daily tasks as a developer here are less on the Front-end parts. But spread out into many stacks with more focus on the overview of the applications.
+      
+      Additionally, as a financial firm, the applications have a lot of details and focus on security, legal/consent, and data integrity.`,
       icon: ICON.terminal,
       skills: [
         'Backends for Frontends',
@@ -43,10 +64,11 @@ export const CONTENT_EXP = {
         'Docker',
         'Azure',
         'Groovy',
+        'DevSecOps',
       ],
       subtitle: 'Prudential Life Assurance (Thailand) PCL',
       title: 'Full-Stack Developer',
-      titleCaption: 'Nov 2020 - Present',
+      titleCaption: 'Nov 2020 - Dec 2021',
     },
     {
       desc: `With the new role, I carry over most of the tasks from the previous role. But now as a Senior, I have the chance to help and teach other members of the team more. Also more responsibility to make decisions in the meetings with other teams.
@@ -67,6 +89,7 @@ After a few months, due to the circumstances, I got to become the web team lead,
         'AWS',
         'CDN',
         'a11y',
+        'Stress Testing',
       ],
       subtitle: 'Pomelofashion',
       title: 'Senior Front-End Engineer',
@@ -87,6 +110,8 @@ During this time, I also had the chance to work in the LEAD program, an internal
         'Server Side Rendering',
         'Jenkins',
         'Redux',
+        'Segment',
+        'Session Monitoring',
         'GTM & GA',
         'Product Management',
       ],
