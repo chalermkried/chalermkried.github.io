@@ -1,8 +1,6 @@
-import { TYPO, MEDIA_QUERY } from '@/const'
+import { TYPO, MEDIA_QUERY, CONTENT_EXP, EL_EXP } from '@/const'
 import styled from 'styled-components'
 import { useMemo } from 'react'
-import { EL_EXP } from '@/const/element'
-import { CONTENT_EXP } from '@/const/content'
 import { ExpCard } from './card'
 
 const Section = styled.section`

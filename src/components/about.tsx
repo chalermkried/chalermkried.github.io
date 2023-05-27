@@ -1,7 +1,12 @@
 import styled from 'styled-components'
-import { TYPO, MEDIA_QUERY, COLOR, ICON } from '@/const'
-import { EL_ABOUT } from '@/const/element'
-import { CONTENT_ABOUT } from '@/const/content'
+import {
+  TYPO,
+  MEDIA_QUERY,
+  COLOR,
+  ICON,
+  EL_ABOUT,
+  CONTENT_ABOUT,
+} from '@/const'
 import { Icon } from '@/components/shared/icon'
 
 const Section = styled.section`

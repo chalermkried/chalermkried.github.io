@@ -1,9 +1,16 @@
 import styled from 'styled-components'
-import { COLOR, CONTAINER_STYLE, TYPO, ICON, MEDIA_QUERY } from '@/const'
+import {
+  COLOR,
+  CONTAINER_STYLE,
+  TYPO,
+  ICON,
+  MEDIA_QUERY,
+  EL_ABOUT,
+  EL_EXP,
+} from '@/const'
 import { Icon } from '@/components/shared/icon'
 import { useStore } from '@/components/store'
 import { MouseEvent, useEffect, useState } from 'react'
-import { EL_ABOUT, EL_EXP } from '@/const/element'
 
 const Nav = styled.nav`
   ${CONTAINER_STYLE}
