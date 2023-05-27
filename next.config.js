@@ -1,12 +1,7 @@
-const withTM = require('next-transpile-modules')(['zustand'])
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  distDir: 'docs',
+}
 
-module.exports = withTM({
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['css-loader'],
-    })
-
-    return config
-  },
-})
+module.exports = nextConfig
