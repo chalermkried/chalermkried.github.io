@@ -7,7 +7,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-const GA_TRACKING_ID = 'UA-177428916-1'
+const GA_TRACKING_ID = 'G-V4TSGF0E5T'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
