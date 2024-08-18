@@ -7,8 +7,6 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-const GA_TRACKING_ID = 'G-V4TSGF0E5T'
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
@@ -68,19 +66,6 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#131d31" />
           <meta name="msapplication-TileColor" content="#fdfaec" />
           <meta name="theme-color" content="#fdfaec" />
-          {(process.env.NODE_ENV === 'production' || true) && (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-              />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_TRACKING_ID}');`,
-                }}
-              />
-            </>
-          )}
         </Head>
         <body>
           <Main />

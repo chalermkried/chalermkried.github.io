@@ -3,8 +3,8 @@ import { ICON } from './icon'
 export const META = {
   title: 'Gear - Chalermkried Sudjanakobkul',
   desc: 'A Front-End Engineer who likes, create, and optimize websites, problem-solving, helping people, and appreciate arts.',
-  image: 'https://chalermkried.github.io/assets/cover.jpg',
-  url: 'https://chalermkried.github.io',
+  image: 'https://www.igear.dev//assets/cover.jpg',
+  url: 'https://www.igear.dev',
 }
 
 export const CONTENT_ABOUT = {
@@ -18,9 +18,15 @@ export const CONTENT_ABOUT = {
 
   I put my effort and take pride in making the statements above true for my work.
 
-  I have experience in the entire software development life cycle, in roles such as Frontend Engineer, Backend Engineer, Assistant Product Manager, and DevOps/Platform Engineer.
+  I have experience in the entire software development life cycle, in roles such as Frontend Engineer, Backend Engineer, Product Manager, Tech Lead/Solution Architect, and DevOps/Platform Engineer.
 
-  However, my main background is as a Frontend Engineer who enjoys optimizing the entire development flow. This includes Code Quality gates (both on local machines and server automations), git branching strategy and flow, CI/CD (covering both deployment and delivery), the final product itself (deployment infrastructure/architecture, caching/network latency), and, last but not least, handling failures (rollback and graceful fallback for users)
+  Even from all the experiences above, my core background is an Frontend Engineer who enjoys optimizing the entire SDLC. This includes team methodologies (e.g. Agile), Code Quality gates (both on local machines and server automations), Git strategy and flow, CI/CD (covering both deployment and delivery), the final product itself (deployment infrastructure/architecture, caching/network latency), and, last but not least, handling failures (rollback and graceful fallback for users)
+
+  Work Style
+  - Pragmatic
+  - Keep it simple
+  - Journey > Destination
+  - It depends
 
   Coding Preferences
   - Typescript
@@ -43,7 +49,31 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
-      desc: `Due to changes in the global economy, the team was restructured, and the workload for the frontend part decreased.
+      desc: `We started to grow the team again, and I choose to focus more on Infrastructure and Architecture parts.
+      
+      In a more defined role as a Platform Engineer, I took full control over the whole CREA tech infrastructure and as a senior member of the team, I provided guidance and mentorship to other team members and help the team on solutions for new features and requests.
+      
+      But even with the role shift, I still continue to work on the frontend parts when it is required.
+
+      Milestones:
+      - Introduction of new, more reliable, monitoring tools
+      - Cost optimization on AWS and other external dependencies`,
+      icon: ICON.terminal,
+      skills: [
+        'RabbitMQ',
+        'Kubernetes Resource Management',
+        'Infrastructure Monitoring',
+        'Infrastructure Scaling',
+        'Cost Optimization',
+        'Solution Architecture',
+        'Kong',
+      ],
+      subtitle: 'CREA',
+      title: 'Platform Engineer',
+      titleCaption: 'June 2023 - Present',
+    },
+    {
+      desc: `The team was restructured, and the workload for the frontend part decreased.
       
       I adapted myself to work in multiple roles within the tech team, returning as a Full-Stack Engineer. Additionally, I had the opportunity to dive deep into CI/CD and the infrastructure of all services as a DevOps Engineer.
       
@@ -51,7 +81,7 @@ export const CONTENT_EXP = {
       
       Milestones:
       - Set up a new production AWS VPC/EKS using terragrunt
-      - Migrate all applications/services from the old EKS cluster to the new one
+      - Migrate all applications/services from the existing EKS cluster to the new one
       - Migrate CI/CD from Circle CI to GitHub Actions`,
       icon: ICON.terminal,
       skills: [
@@ -69,7 +99,7 @@ export const CONTENT_EXP = {
       ],
       subtitle: 'CREA',
       title: 'Senior Fullstack/DevOps Engineer',
-      titleCaption: 'Oct 2022 - Present',
+      titleCaption: 'Oct 2022 - June 2023',
     },
     {
       desc: `I returned to a leaner working environment and resumed a more frontend-focused role. As a senior member of the team, my work scope expanded to more than just coding and delivering features.
@@ -79,8 +109,8 @@ export const CONTENT_EXP = {
       Software paradigms, concepts, and architectural design played a vital role in helping the company, the team, and application scaling.
       
       Milestones:
-      - Integrate of Auth0
-      - Integrate of Semantic Release
+      - Integrate Auth0
+      - Integrate Semantic Release
       - Migrate CRA project to Vite
       - Migrate Redux to Zustand
       - Mentor a team member`,
