@@ -55,9 +55,9 @@ export const CONTENT_EXP = {
       
       But even with the role shift, I still continue to work on the frontend parts when it is required.
 
-      Milestones:
       - Introduction of new, more reliable, monitoring tools
-      - Cost optimization on AWS and other external dependencies`,
+      - Cost optimization on AWS and other external dependencies
+      - Spearhead Etax integration with INET`,
       icon: ICON.terminal,
       skills: [
         'RabbitMQ',
@@ -78,11 +78,10 @@ export const CONTENT_EXP = {
       I adapted myself to work in multiple roles within the tech team, returning as a Full-Stack Engineer. Additionally, I had the opportunity to dive deep into CI/CD and the infrastructure of all services as a DevOps Engineer.
       
       The main focus of the work shifted from feature delivery to maintenance and migrations.
-      
-      Milestones:
-      - Set up a new production AWS VPC/EKS using terragrunt
-      - Migrate all applications/services from the existing EKS cluster to the new one
-      - Migrate CI/CD from Circle CI to GitHub Actions`,
+
+      - Set up a new production AWS VPC/EKS using Terragrunt/Terraform
+      - Migration of all applications/services from the existing EKS cluster to the new one
+      - Migration of CI/CD from Circle CI to GitHub Actions`,
       icon: ICON.terminal,
       skills: [
         'Github Actions',
@@ -107,13 +106,11 @@ export const CONTENT_EXP = {
       The applications I worked on are more logic-heavy and involved many connected parts. Effective state management and data manipulation were crucial. Our team's work also involved the process of migrating an older codebase to a newer stack, which required regular collaboration and communication between engineers.
       
       Software paradigms, concepts, and architectural design played a vital role in helping the company, the team, and application scaling.
-      
-      Milestones:
-      - Integrate Auth0
-      - Integrate Semantic Release
+
+      - Auth0 integration
+      - Semantic Release integration
       - Migrate CRA project to Vite
-      - Migrate Redux to Zustand
-      - Mentor a team member`,
+      - Migrate Redux to Zustand`,
       icon: ICON.terminal,
       skills: [
         'CircleCI',
@@ -135,12 +132,11 @@ export const CONTENT_EXP = {
       The scope of work in this role was quite broad. I had more opportunities to be involved in the DevOps part of the product cycle compared to my previous experiences. My daily tasks as a developer focused less on the Front-end and spread across various stacks, with a greater emphasis on understanding the overall applications.
       
       Additionally, being in a financial firm, the applications required a strong focus on security, legal/consent, and data integrity.
-      
-      Milestones:
-      - Migratie projects on Bamboo to Jenkins
+
+      - Migrate projects on Bamboo to Jenkins
       - Load test the Azure-hosted services
       - Create campaign microsites on both frontend and backend
-      - Design and build a webhook service that the customer connects`,
+      - Design and build a webhook service that the customer integrates with`,
       icon: ICON.terminal,
       skills: [
         'Backends for Frontends',
@@ -165,7 +161,6 @@ export const CONTENT_EXP = {
 
       After a few months, circumstances led to me being promoted to the position of web team lead within the company. This promotion came with additional responsibilities, including tasks at higher levels such as team management, web monitoring, infrastructure monitoring, release management, documentation, and overseeing a team of outsourced developers.
 
-      Milestones:
       - Spearhead the team on frontend rebrand/redesign with a design system
       - Lead the web team with 4 members (internal and outsource)
       - Migration of Bitbucket to Github (including the CI/CD)
@@ -197,7 +192,6 @@ export const CONTENT_EXP = {
       
       During this time, I had the opportunity to participate in the LEAD program, an internal employee development program. Through this program, I learned how to work as an assistant product manager for the Pomelo Partner project.
 
-      Milestones:
       - Manage the Pomelo Screen and Internal Dashboard projects
       - Create season campaign landing pages
       - Take the role of Assistance Product Manager for 6 months
@@ -223,7 +217,9 @@ export const CONTENT_EXP = {
     {
       desc: `I worked as a member of the Front-End web development team in a multicultural software house company, which had a full team dedicated to product/software development consisting of Designers (UI/UX), Product Managers (PM/PO), Testers (QA), and Backend Developers.
 
-      During my time here, I had the opportunity to work on various projects. The first project provided me with valuable learning experiences, allowing me to explore the latest web technologies and gain a better understanding of the software development process. One notable project was a large-scale endeavor with a tight deadline, transitioning into the MVP (Minimum Viable Product) development phase. Additionally, we provided ongoing support after the project was launched.`,
+      During my time here, I had the opportunity to work on various projects. The first project provided me with valuable learning experiences, allowing me to explore the latest web technologies and gain a better understanding of the software development process. One notable project was a large-scale endeavor with a tight deadline, transitioning into the MVP (Minimum Viable Product) development phase. Additionally, we provided ongoing support after the project was launched.
+      
+      - MVP launch for Telenor internal admin dashboard`,
       icon: ICON.terminal,
       skills: [
         'TypeScript',
