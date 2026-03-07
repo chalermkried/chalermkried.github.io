@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "rm -rf .next docs && next build",
-    "start": "next start",
+    "start": "npm run serve",
+    "serve": "npx serve docs",
     "lint": "next lint"
   },
   "repository": {
@@ -20,12 +21,12 @@
   },
   "homepage": "https://github.com/chalermkried/chalermkried.github.io#readme",
   "dependencies": {
-    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react": "7.32.2",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^6.0.0-rc.0",
-    "zustand": "^4.3.8"
+    "styled-components": "6.3.11",
+    "zustand": "4.3.8"
   },
   "devDependencies": {
     "@types/node": "20.2.5",
@@ -33,13 +34,14 @@
     "@types/react-dom": "18.2.4",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.8.8",
     "typescript": "5.0.4"
   },
-  "volta": {
-    "node": "18.16.0",
-    "npm": "9.6.7"
-  }
+  "engines": {
+    "node": "=24.12.0",
+    "npm": "=11.6.2"
+  },
+  "packageManager": "npm@11.6.2"
 }
