@@ -20,7 +20,7 @@ export const MEDIA_QUERY = {
 export const CONTAINER_STYLE = css`
   margin: auto;
   width: 80%;
-  max-width: 720px;
+  max-width: 740px;
 
   @media ${MEDIA_QUERY.belowTablet} {
     width: 100%;
@@ -33,7 +33,7 @@ const hexLight = '#fdfaec'
 export const GlobalStyle = createGlobalStyle<{ isDarkMode: boolean }>`
   html {
     scroll-behavior: smooth;
-    
+
     @media screen and (prefers-reduced-motion: reduce) {
       scroll-behavior: auto;
     }
@@ -58,7 +58,7 @@ export const GlobalStyle = createGlobalStyle<{ isDarkMode: boolean }>`
     background-color: var(${COLOR.neutral});
     color: var(${COLOR.primary});
   }
-    
+
   html,
   button {
     font-family: 'Heebo', var(--ff);

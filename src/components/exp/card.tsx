@@ -10,6 +10,7 @@ const iconMargin = 20
 const WrapperDiv = styled.div`
   margin: 16px 0 32px;
   padding-right: 64px;
+  scroll-margin-top: 72px;
 
   .subtitle {
     display: block;
@@ -27,10 +28,12 @@ const WrapperDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 4px 8px;
+    margin-top: 12px;
   }
 
   .subtitle,
   .desc,
+  .bullet,
   .skill-wrapper {
     padding-left: ${iconSize + iconMargin}px;
 
@@ -91,14 +94,18 @@ const TitleDiv = styled.div`
 
 export function ExpCard({
   desc,
+  descBullets,
   icon,
+  id,
   skills,
   subtitle,
   title,
   titleCaption,
 }: {
   desc: string
+  descBullets?: string[]
   icon: string
+  id: string
   skills: string[]
   subtitle: string
   title: string
@@ -110,7 +117,7 @@ export function ExpCard({
   )
 
   return (
-    <WrapperDiv>
+    <WrapperDiv id={id}>
       <TitleDiv>
         <Icon src={icon} />
         <h3 className={`${TYPO.h3} title`}>{title}</h3>
@@ -120,6 +127,11 @@ export function ExpCard({
       </TitleDiv>
       <span className={`${TYPO.subtitle1} subtitle`}>{subtitle}</span>
       <p className={`${TYPO.body2} desc`}>{desc}</p>
+      {descBullets?.map((bullet, index) => (
+        <p key={index} className={`${TYPO.body2} bullet`}>
+          - {bullet}
+        </p>
+      ))}
       <div className="skill-wrapper">{skillsJsx}</div>
     </WrapperDiv>
   )

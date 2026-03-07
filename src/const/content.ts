@@ -14,28 +14,27 @@ export const CONTENT_ABOUT = {
 
   I'm a Software Engineer who likes to turn ideas into reality.
 
-  Software, applications, services, whatever you want to call them, should be easy to use, fast, snappy, and fun. Just like everything in life that people want to use repeatedly, they should provide an enjoyable experience!
+  I've been in the field for almost 10 years now. I look at software and applications as products, and I believe any product should be easy to use and bring joy to the user.
 
-  I put my effort and take pride in making the statements above true for my work.
+  But I've also spent the last decade learning that the real challenge is balance. It's about figuring out the "what we want" versus "what we can actually ship." I take pride in finding that sweet spot where quality meets reality.
 
-  I have experience in the entire software development life cycle, in roles such as Frontend Engineer, Backend Engineer, Product Manager, Tech Lead/Solution Architect, and DevOps/Platform Engineer.
+  I've worn pretty much every hat—Frontend, Backend, PM, and Architect. These days, I focus a lot on driving projects and leading teams to the finish line without losing our minds (or the code quality) along the way.
 
-  Even from all the experiences above, my core background is an Frontend Engineer who enjoys optimizing the entire SDLC. This includes team methodologies (e.g. Agile), Code Quality gates (both on local machines and server automations), Git strategy and flow, CI/CD (covering both deployment and delivery), the final product itself (deployment infrastructure/architecture, caching/network latency), and, last but not least, handling failures (rollback and graceful fallback for users)
+  I'm also a huge believer in AI and coding agents. I see them as the ultimate companions. They handle the heavy lifting and the "boring" stuff so I can focus on solving the actual problems. They are the newest kids on the block—and the kids are alright.
 
   Work Style
   - Pragmatic
   - Keep it simple
-  - Journey > Destination
+  - Trade-offs over perfection
   - It depends
 
   Coding Preferences
-  - Typescript
+  - Typescript + AI Agents
   - No semi-colons
   - Spaces
-  - Infrastructure as code
-  - Automate everything!
+  - Automate literally everything
 
-  Life Preferences
+  Misc Preferences
   - Music
   - Football
   - Philosophy
@@ -49,15 +48,38 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
-      desc: `We started to grow the team again, and I choose to focus more on Infrastructure and Architecture parts.
-      
-      In a more defined role as a Platform Engineer, I took full control over the whole CREA tech infrastructure and as a senior member of the team, I provided guidance and mentorship to other team members and help the team on solutions for new features and requests.
-      
-      But even with the role shift, I still continue to work on the frontend parts when it is required.
+      desc: `Stepping into a more strategic role, I now lead the technical direction and high-level decision-making for our features and tech strategies. As a Senior Platform Engineer, I focus heavily on mentoring our engineering team and ensuring our tech stack scales with our targets.
 
-      - Introduction of new, more reliable, monitoring tools
-      - Cost optimization on AWS and other external dependencies
-      - Spearhead Etax integration with INET`,
+      I'm also spearheading our transition into the AI-augmented era. By integrating AI agents into our development workflow, code reviews, and automations, I've helped the team to increase our output velocity and software quality. It's about working smarter—letting the agents handle the repetitive stuff so we can focus on the hard problems.`,
+      descBullets: [
+        'Leading and mentoring the team on technical strategy and architectural decisions.',
+        'Spearheading the integration of AI agents to streamline workflows and automate code reviews.',
+        'Architected a Micro-Frontend system to allow for modern tech stack adoption alongside legacy code.',
+        `Serving as the technical lead for the company's ISO 27001 security certification.`,
+      ],
+      icon: ICON.terminal,
+      skills: [
+        'AI Agents',
+        'Engineering Management',
+        'Security and Compliance',
+        'Micro Frontends',
+      ],
+      id: 'exp-crea-senior-platform',
+      subtitle: 'CREA',
+      title: 'Senior Platform Engineer',
+      titleCaption: 'Dec 2025 - Present',
+    },
+    {
+      desc: `As the team grew, I shifted my focus toward infrastructure and architecture. I took ownership of the entire CREA tech infrastructure, ensuring our systems were reliable and scalable. While my role became more platform-focused, I stayed true to my roots and continued to jump into the frontend whenever high-impact UI work was needed.
+
+      As a senior member of the team, I provided guidance and mentorship, helping bridge the gap between complex feature requests and sustainable technical solutions.`,
+      descBullets: [
+        'Improved observability by introducing more reliable monitoring and alerting tools.',
+        'Achieved significant cost savings through AWS optimization and managing external dependencies.',
+        'Led the architectural design and integration for major marketplaces like TikTok and Shopify.',
+        'Architected and deployed GPU-based services on EKS using Spot instances to maximize performance-to-cost ratio.',
+        'Set up and managed Akeneo PIM on EKS using customized Docker images.',
+      ],
       icon: ICON.terminal,
       skills: [
         'RabbitMQ',
@@ -67,16 +89,19 @@ export const CONTENT_EXP = {
         'Cost Optimization',
         'Solution Architecture',
         'Kong',
+        'Akeneo PIM',
+        'GPU ASG Spot Instances',
       ],
+      id: 'exp-crea-platform',
       subtitle: 'CREA',
       title: 'Platform Engineer',
-      titleCaption: 'June 2023 - Present',
+      titleCaption: 'June 2023 - Dec 2025',
     },
     {
       desc: `The team was restructured, and the workload for the frontend part decreased.
-      
+
       I adapted myself to work in multiple roles within the tech team, returning as a Full-Stack Engineer. Additionally, I had the opportunity to dive deep into CI/CD and the infrastructure of all services as a DevOps Engineer.
-      
+
       The main focus of the work shifted from feature delivery to maintenance and migrations.
 
       - Set up a new production AWS VPC/EKS using Terragrunt/Terraform
@@ -96,15 +121,16 @@ export const CONTENT_EXP = {
         'Python',
         'Go',
       ],
+      id: 'exp-crea-senior-fullstack',
       subtitle: 'CREA',
       title: 'Senior Fullstack/DevOps Engineer',
       titleCaption: 'Oct 2022 - June 2023',
     },
     {
       desc: `I returned to a leaner working environment and resumed a more frontend-focused role. As a senior member of the team, my work scope expanded to more than just coding and delivering features.
-      
+
       The applications I worked on are more logic-heavy and involved many connected parts. Effective state management and data manipulation were crucial. Our team's work also involved the process of migrating an older codebase to a newer stack, which required regular collaboration and communication between engineers.
-      
+
       Software paradigms, concepts, and architectural design played a vital role in helping the company, the team, and application scaling.
 
       - Auth0 integration
@@ -120,17 +146,18 @@ export const CONTENT_EXP = {
         'Python',
         'Django',
       ],
+      id: 'exp-crea-senior-frontend',
       subtitle: 'CREA',
       title: 'Senior Frontend Engineer',
       titleCaption: 'Dec 2021 - Oct 2022',
     },
     {
       desc: `I worked in a financial-related corporate firm for the first time, where I had the opportunity to work on various projects, including both customer-facing and internal products. The works involved different stacks such as Front-end, BFF, Gateway, APIs, and Back-end.
-      
+
       Within the technology team, I learned to use several new tools and worked with different service providers. I gained more hands-on experience in building products and applications from the ground up.
 
       The scope of work in this role was quite broad. I had more opportunities to be involved in the DevOps part of the product cycle compared to my previous experiences. My daily tasks as a developer focused less on the Front-end and spread across various stacks, with a greater emphasis on understanding the overall applications.
-      
+
       Additionally, being in a financial firm, the applications required a strong focus on security, legal/consent, and data integrity.
 
       - Migrate projects on Bamboo to Jenkins
@@ -152,6 +179,7 @@ export const CONTENT_EXP = {
         'Groovy',
         'DevSecOps',
       ],
+      id: 'exp-prudential',
       subtitle: 'Prudential Life Assurance (Thailand) PCL',
       title: 'Full-Stack Developer',
       titleCaption: 'Nov 2020 - Dec 2021',
@@ -181,6 +209,7 @@ export const CONTENT_EXP = {
         'CDN',
         'Stress Testing',
       ],
+      id: 'exp-pomelo-senior',
       subtitle: 'Pomelofashion',
       title: 'Senior Front-End Engineer',
       titleCaption: 'Feb 2020 - Nov 2020',
@@ -189,7 +218,7 @@ export const CONTENT_EXP = {
       desc: `I worked as part of the Front-End web team, responsible for maintaining, implementing new features, and supporting campaigns with the newly released Pomelo website.
 
       The Pomelo web was the primary product of focus. I collaborated closely with the UI/UX team to implement and enhance the website based on the provided mockups and priorities set by the Product team. I also worked closely with the QA team to address issues and bugs. Additionally, I took on the role of lead developer for other web projects such as Pomelo Screens and Internal Dashboards during the later part of this period.
-      
+
       During this time, I had the opportunity to participate in the LEAD program, an internal employee development program. Through this program, I learned how to work as an assistant product manager for the Pomelo Partner project.
 
       - Manage the Pomelo Screen and Internal Dashboard projects
@@ -210,6 +239,7 @@ export const CONTENT_EXP = {
         'GTM & GA',
         'Product Management',
       ],
+      id: 'exp-pomelo',
       subtitle: 'Pomelofashion',
       title: 'Front-End Engineer',
       titleCaption: 'Aug 2018 - Jan 2020',
@@ -218,7 +248,7 @@ export const CONTENT_EXP = {
       desc: `I worked as a member of the Front-End web development team in a multicultural software house company, which had a full team dedicated to product/software development consisting of Designers (UI/UX), Product Managers (PM/PO), Testers (QA), and Backend Developers.
 
       During my time here, I had the opportunity to work on various projects. The first project provided me with valuable learning experiences, allowing me to explore the latest web technologies and gain a better understanding of the software development process. One notable project was a large-scale endeavor with a tight deadline, transitioning into the MVP (Minimum Viable Product) development phase. Additionally, we provided ongoing support after the project was launched.
-      
+
       - MVP launch for Telenor internal admin dashboard`,
       icon: ICON.terminal,
       skills: [
@@ -233,6 +263,7 @@ export const CONTENT_EXP = {
         'RxJS',
         'NgRx',
       ],
+      id: 'exp-7peaks',
       subtitle: '7 Peaks Software',
       title: 'Junior Front-End Developer',
       titleCaption: 'Jun 2017 -  Aug 2018',
@@ -253,6 +284,7 @@ export const CONTENT_EXP = {
         'Apache',
         'Monolithic',
       ],
+      id: 'exp-swu',
       subtitle: 'Srinakharinwirot University',
       title: 'Student',
       titleCaption: '2014 - 2017',

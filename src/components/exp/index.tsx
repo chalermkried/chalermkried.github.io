@@ -26,8 +26,10 @@ export function Exp() {
       CONTENT_EXP.data.map((card) => (
         <ExpCard
           desc={card.desc}
+          descBullets={card.descBullets}
           key={`${card.title}${card.titleCaption}`}
           icon={card.icon}
+          id={card.id}
           skills={card.skills}
           subtitle={card.subtitle}
           title={card.title}
