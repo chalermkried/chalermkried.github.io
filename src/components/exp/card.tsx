@@ -27,10 +27,12 @@ const WrapperDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 4px 8px;
+    margin-top: 12px;
   }
 
   .subtitle,
   .desc,
+  .bullet,
   .skill-wrapper {
     padding-left: ${iconSize + iconMargin}px;
 
@@ -91,6 +93,7 @@ const TitleDiv = styled.div`
 
 export function ExpCard({
   desc,
+  descBullets,
   icon,
   skills,
   subtitle,
@@ -98,6 +101,7 @@ export function ExpCard({
   titleCaption,
 }: {
   desc: string
+  descBullets?: string[]
   icon: string
   skills: string[]
   subtitle: string
@@ -120,6 +124,11 @@ export function ExpCard({
       </TitleDiv>
       <span className={`${TYPO.subtitle1} subtitle`}>{subtitle}</span>
       <p className={`${TYPO.body2} desc`}>{desc}</p>
+      {descBullets?.map((bullet, index) => (
+        <p key={index} className={`${TYPO.body2} bullet`}>
+          - {bullet}
+        </p>
+      ))}
       <div className="skill-wrapper">{skillsJsx}</div>
     </WrapperDiv>
   )
