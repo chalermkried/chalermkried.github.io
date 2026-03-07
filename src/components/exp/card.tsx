@@ -10,6 +10,7 @@ const iconMargin = 20
 const WrapperDiv = styled.div`
   margin: 16px 0 32px;
   padding-right: 64px;
+  scroll-margin-top: 72px;
 
   .subtitle {
     display: block;
@@ -95,6 +96,7 @@ export function ExpCard({
   desc,
   descBullets,
   icon,
+  id,
   skills,
   subtitle,
   title,
@@ -103,6 +105,7 @@ export function ExpCard({
   desc: string
   descBullets?: string[]
   icon: string
+  id: string
   skills: string[]
   subtitle: string
   title: string
@@ -114,7 +117,7 @@ export function ExpCard({
   )
 
   return (
-    <WrapperDiv>
+    <WrapperDiv id={id}>
       <TitleDiv>
         <Icon src={icon} />
         <h3 className={`${TYPO.h3} title`}>{title}</h3>

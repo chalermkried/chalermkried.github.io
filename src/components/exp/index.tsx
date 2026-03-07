@@ -29,6 +29,7 @@ export function Exp() {
           descBullets={card.descBullets}
           key={`${card.title}${card.titleCaption}`}
           icon={card.icon}
+          id={card.id}
           skills={card.skills}
           subtitle={card.subtitle}
           title={card.title}
