@@ -9,7 +9,7 @@ export const META = {
 
 export const CONTENT_ABOUT = {
   title: 'Chalermkried Sudjanakobkul',
-  subtitle: 'Software Engineer',
+  subtitle: 'Platform Architect',
   desc: `Hi, I'm Gear!
 
   I'm a Software Engineer who likes to turn ideas into reality.
@@ -48,6 +48,19 @@ export const CONTENT_EXP = {
   title: 'Experience',
   data: [
     {
+      desc: `Recently started the new position. Alongside delivering across the full stack, I'm looking to help shape how AI and agentic development become part of everyday engineering. By combining platform engineering, software architecture, and practical AI adoption, I hope to help teams build and deliver software with greater speed, quality, and confidence.`,
+      icon: ICON.terminal,
+      skills: [
+        'Platform Architecture',
+        'Full Stack Development',
+        'Agentic Engineering',
+      ],
+      id: 'exp-allianz-technology',
+      subtitle: 'Allianz Technology',
+      title: 'Expert Full Stack Developer',
+      titleCaption: 'Jul 2026 - Present',
+    },
+    {
       desc: `Stepping into a more strategic role, I now lead the technical direction and high-level decision-making for our features and tech strategies. As a Senior Platform Engineer, I focus heavily on mentoring our engineering team and ensuring our tech stack scales with our targets.
 
       I'm also spearheading our transition into the AI-augmented era. By integrating AI agents into our development workflow, code reviews, and automations, I've helped the team to increase our output velocity and software quality. It's about working smarter—letting the agents handle the repetitive stuff so we can focus on the hard problems.`,
@@ -67,7 +80,7 @@ export const CONTENT_EXP = {
       id: 'exp-crea-senior-platform',
       subtitle: 'CREA',
       title: 'Senior Platform Engineer',
-      titleCaption: 'Dec 2025 - Present',
+      titleCaption: 'Dec 2025 - Jun 2026',
     },
     {
       desc: `As the team grew, I shifted my focus toward infrastructure and architecture. I took ownership of the entire CREA tech infrastructure, ensuring our systems were reliable and scalable. While my role became more platform-focused, I stayed true to my roots and continued to jump into the frontend whenever high-impact UI work was needed.
